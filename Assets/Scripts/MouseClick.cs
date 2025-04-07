@@ -23,14 +23,5 @@ public class MouseClick : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(1))
-        {
-            Debug.Log("Pressed right click.");
-        }
-
-        if (Input.GetMouseButton(2))
-        {
-            Debug.Log("Pressed middle click.");
-        }
     }
 }
