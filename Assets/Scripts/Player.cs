@@ -1,66 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    private Rigidbody2D rb;
 
-    private float moveHorizontal;
-    private float moveVertical;
-    private Vector2 currentVelocity;
-    [SerializeField]
-    private float movementSpeed = 3f;
-    private Rigidbody2D characterRigidBody;
-    private bool isJumping;
-    [SerializeField]
-    private float jumpForce = 100f;
-    private bool alreadyJumped = false;
+    public float speed;
+    private float Move;
 
-    // Start is called before the first frame update
+    public float jump;
+
+    bool grounded;
+
     void Start()
     {
-        this.characterRigidBody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        this.moveHorizontal = Input.GetAxis("Horizontal");
-        this.moveVertical = Input.GetAxis("Vertical");
-        this.currentVelocity = this.characterRigidBody.velocity;
+        Move = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        rb.velocity = new Vector2(speed * Move, rb.velocity.y);
+
+        if (Input.GetButtonDown("Jump") && grounded)
         {
-            if (!isJumping)
+            rb.AddForce(new Vector2(rb.velocity.x, jump * 10));
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Vector3 normal = other.GetContact(0).normal;
+            if (normal == Vector3.up)
             {
-                isJumping = true;
-                alreadyJumped = false;
+                grounded = true;
             }
         }
     }
 
-    private void FixedUpdate()
+    private void OnCollisionExit2D(Collision2D other)
     {
-        if (this.moveHorizontal != 0)
+        if (other.gameObject.CompareTag("Ground"))
         {
-            this.characterRigidBody.velocity = new Vector2(this.moveHorizontal * this.movementSpeed, this.currentVelocity.y);
-        }
-
-        if (isJumping && !alreadyJumped)
-        {
-            this.characterRigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
-            this.alreadyJumped = true;
+            grounded = false;
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag.Equals("Background"))
-        {
-            this.isJumping = false;
-        }
-    }
-    
-    
 }
