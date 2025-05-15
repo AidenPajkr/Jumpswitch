@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class MouseClick : MonoBehaviour
 {
-    public GameObject ObstacleTiles;
+    public GameObject[] ObstacleTiles;
+   
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Pressed left click.");
+        foreach (GameObject obj in ObstacleTiles)
+        { 
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+              
 
-            if (!ObstacleTiles.activeSelf)
-            {
-                ObstacleTiles.SetActive(true);
-            }
+                Debug.Log("Pressed enter");
+
+                if (!obj.activeSelf)
+                {
+                    obj.SetActive(true);
+                }
             
-            else
-            {
-                ObstacleTiles.SetActive(false);
+                else
+                {
+                    obj.SetActive(false);
+                }
             }
         }
-
     }
 }
