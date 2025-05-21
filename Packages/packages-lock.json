@@ -97,6 +97,15 @@
         "com.unity.mathematics": "1.2.1"
       }
     },
+    "com.unity.cinemachine": {
+      "version": "2.8.9",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.31"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "file:com.unity.collab-proxy@2.0.7",
       "depth": 0,
@@ -249,16 +258,6 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
-      }
-    },
-    "digital.dream.gamedevforbeginners": {
-      "version": "file:digital.dream.gamedevforbeginners@2b97b6a1bc",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.render-pipelines.universal": "12.1.12",
-        "com.unity.textmeshpro": "3.0.6",
-        "com.unity.splines": "2.5.2"
       }
     },
     "com.unity.modules.ai": {

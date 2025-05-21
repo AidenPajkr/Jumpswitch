@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class DeactivateOnStart : MonoBehaviour
 {
-    public GameObject Deactivate;
+    public GameObject[] Deactivate;
 
     void Start()
     {
-        Deactivate.SetActive(false);
+        foreach (GameObject obj in Deactivate)
+        {
+            obj.SetActive(false);
+        }
+        
     }
 
 }

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour
 {
-    private Deadzone respawn;
+    CharacterController2D characterController2D;
+
+
     private BoxCollider2D checkPointCollider;
 
-    void Awake()
+    private void Awake()
     {
-        checkPointCollider = GetComponent<BoxCollider2D>();
-        respawn = GameObject.FindGameObjectWithTag("Respawn").GetComponent<Deadzone>();
+        characterController2D = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController2D>();
     }
     void Start()
     {
@@ -23,12 +24,11 @@ public class Checkpoints : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            respawn.respawnPoint = this.gameObject;
-            checkPointCollider.enabled = false;
+            characterController2D.UpdateCheckpoint(transform.position);
         }    
     }
 }
