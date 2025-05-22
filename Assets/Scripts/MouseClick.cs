@@ -13,7 +13,7 @@ public class MouseClick : MonoBehaviour
         { 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-              
+                AudioManager.PlaySound(SoundType.click); 
 
                 Debug.Log("Pressed enter");
 
