@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseClick : MonoBehaviour
+public class Enter : MonoBehaviour
 {
     public GameObject[] ObstacleTiles;
    
@@ -15,7 +15,6 @@ public class MouseClick : MonoBehaviour
             {
                 AudioManager.PlaySound(SoundType.click); 
 
-                Debug.Log("Pressed enter");
 
                 if (!obj.activeSelf)
                 {

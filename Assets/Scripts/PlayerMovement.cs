@@ -25,22 +25,16 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
         }
 
-        if (controller.m_Grounded && Input.GetKeyDown(KeyCode.A))
+        if (controller.m_Grounded && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
         {
             footstepController.isWalking = true;
         }
-        if (controller.m_Grounded && Input.GetKeyDown(KeyCode.D))
-        {
-            footstepController.isWalking = true;
-        }
-        if (Input.GetKeyUp(KeyCode.A))
+        
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             footstepController.isWalking = false;
         }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            footstepController.isWalking = false;
-        }
+
     }
 
     void FixedUpdate()
