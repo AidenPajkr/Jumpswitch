@@ -5,7 +5,12 @@ using UnityEngine;
 public class Checkpoints : MonoBehaviour
 {
     CharacterController2D characterController2D;
+    
+    public AudioClip passed;
+    public bool audioPlayed = false;
 
+    public Sprite greenBeam;
+    public SpriteRenderer render;
 
     private BoxCollider2D checkPointCollider;
 
@@ -15,20 +20,25 @@ public class Checkpoints : MonoBehaviour
     }
     void Start()
     {
-        
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = passed;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             characterController2D.UpdateCheckpoint(transform.position);
-        }    
+            render.sprite = greenBeam;
+            
+            if (audioPlayed == false)
+            {
+                GetComponent<AudioSource>().Play();
+                audioPlayed = true;
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
-	Vector2 checkpointPos;
+	public Vector2 checkpointPos;
 	private FootstepController footstepController;
 
 	[Header("Events")]
@@ -35,6 +35,7 @@ public class CharacterController2D : MonoBehaviour
 			OnLandEvent = new UnityEvent();
 
 		footstepController = GetComponentInChildren<FootstepController>(); // Get the FootstepController component
+	
 	}
 
     private void Start()
@@ -42,7 +43,7 @@ public class CharacterController2D : MonoBehaviour
 		checkpointPos = transform.position;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
 		if (collision.CompareTag("Deadzone"))
         {
@@ -53,7 +54,15 @@ public class CharacterController2D : MonoBehaviour
 	public void UpdateCheckpoint(Vector2 pos)
     {
 		checkpointPos = pos;
-    }
+	}
+
+    private void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			transform.position = checkpointPos;
+		}
+	}
 
     private void FixedUpdate()
 	{
@@ -72,7 +81,6 @@ public class CharacterController2D : MonoBehaviour
 					OnLandEvent.Invoke();
 			}
 		}
-
 	}
 
 

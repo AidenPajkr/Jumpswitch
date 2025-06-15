@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: obstacleRMid
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 1f067a5358d2fbb44a969a255256152e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.74509805, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0

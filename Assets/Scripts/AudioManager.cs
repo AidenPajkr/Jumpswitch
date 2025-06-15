@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum SoundType
 {
-    click 
+    click
 }
 
 [RequireComponent(typeof(AudioSource))]
