@@ -1,0 +1,5 @@
+work on last part (jumps too high)
+visual changes to spikes that can be turned off + maybe adding otlines too
+remove screen visual from text that isnt a tutorial
+find out max jump height and distance to better platformer design (measure by an empty game object for percise measuring)
+take inspiration from other platformers  

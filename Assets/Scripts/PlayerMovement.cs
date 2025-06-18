@@ -26,12 +26,12 @@ public class PlayerMovement : MonoBehaviour
             AudioManager.PlaySound(SoundType.jump);
         }
 
-        if (controller.m_Grounded && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
+        if (controller.m_Grounded && horizontalMove!=0)
         {
             footstepController.isWalking = true;
         }
         
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        else
         {
             footstepController.isWalking = false;
         }
