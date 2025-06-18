@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            AudioManager.PlaySound(SoundType.jump);
         }
 
         if (controller.m_Grounded && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)))
