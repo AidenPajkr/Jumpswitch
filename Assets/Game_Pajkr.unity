@@ -753,7 +753,6 @@ GameObject:
   - component: {fileID: 102496452}
   - component: {fileID: 102496451}
   - component: {fileID: 102496450}
-  - component: {fileID: 102496449}
   m_Layer: 0
   m_Name: WALLFalseOnStart
   m_TagString: Wall
@@ -776,66 +775,6 @@ Transform:
   m_Father: {fileID: 1803671069}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &102496449
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102496447}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 102496451}
-    m_ColliderPaths:
-    - - X: 830000000
-        Y: 170000000
-      - X: 820000000
-        Y: 170000000
-      - X: 820000000
-        Y: 130000000
-      - X: 830000000
-        Y: 130000000
-    - - X: 150000000
-        Y: 50000000
-      - X: 130000000
-        Y: 50000000
-      - X: 130000000
-        Y: 0
-      - X: 150000000
-        Y: 0
-    - - X: 670000000
-        Y: -50000000
-      - X: 660000000
-        Y: -50000000
-      - X: 660000000
-        Y: -70000000
-      - X: 670000000
-        Y: -70000000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 82.99997, y: 13}
-      - {x: 82.99997, y: 17}
-      - {x: 82, y: 16.999971}
-      - {x: 82.00003, y: 13}
-    - - {x: 14.999971, y: 0}
-      - {x: 14.999971, y: 5}
-      - {x: 13, y: 4.999971}
-      - {x: 13.00003, y: 0}
-    - - {x: 66.99997, y: -7}
-      - {x: 66.99997, y: -5}
-      - {x: 66, y: -5.000029}
-      - {x: 66.00003, y: -7}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
 --- !u!50 &102496450
 Rigidbody2D:
   serializedVersion: 4
@@ -122765,6 +122704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509543690}
   - component: {fileID: 509543691}
+  - component: {fileID: 509543692}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -122805,6 +122745,18 @@ MonoBehaviour:
   position: 0
   direction: 1
   tooltip: 
+--- !u!114 &509543692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509543689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00d6965534dc7a489896fc178accc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
