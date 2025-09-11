@@ -48,6 +48,7 @@ public class CharacterController2D : MonoBehaviour
 		if (collision.CompareTag("Deadzone"))
         {
 			transform.position = checkpointPos;
+			AudioManager.PlaySound(SoundType.death);
         }
     }
 

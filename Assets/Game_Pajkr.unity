@@ -127953,7 +127953,7 @@ GameObject:
   - component: {fileID: 1618658190}
   - component: {fileID: 1618658189}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AudioMngr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128069,6 +128069,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundList:
   - {fileID: 8300000, guid: 4bbe8d0dfe7d66f45b2be827d961a7b7, type: 3}
+  - {fileID: 8300000, guid: 23f6cf56a09faca40ad4e549949d8376, type: 3}
+  - {fileID: 8300000, guid: e9b7db83920748946a4d032f52f747a6, type: 3}
 --- !u!4 &1618658191
 Transform:
   m_ObjectHideFlags: 0
