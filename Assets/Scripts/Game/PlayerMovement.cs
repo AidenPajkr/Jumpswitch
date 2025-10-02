@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     private FootstepController footstepController;
+    public Animator animator;
 
     public float runSpeed = 40f;
 
@@ -24,16 +25,23 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             AudioManager.PlaySound(SoundType.jump);
+            animator.SetTrigger("isJumping");
         }
 
         if (controller.m_Grounded && horizontalMove!=0)
         {
             footstepController.isWalking = true;
-        }
-        
+            animator.SetBool("isMoving", true);
+        }       
         else
         {
             footstepController.isWalking = false;
+            animator.SetBool("isMoving", false);
+        }
+
+        if(controller.m_Grounded)
+        {
+            animator.ResetTrigger("isJumping");
         }
 
     }
@@ -41,6 +49,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
-        jump = false;
+        jump = false;        
     }
 }
