@@ -128782,9 +128782,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1601ff61a4e458844be44e4614c084f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4bbe8d0dfe7d66f45b2be827d961a7b7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.3
   m_Pitch: 0.5
   Loop: 0
   Mute: 0
@@ -128881,9 +128881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundList:
-  - {fileID: 8300000, guid: 1601ff61a4e458844be44e4614c084f5, type: 3}
-  - {fileID: 8300000, guid: ca59eebb91c25e64baab78b2c0933005, type: 3}
-  - {fileID: 8300000, guid: fc93d0a7cdec74a4a98d747074f01be7, type: 3}
+  - {fileID: 8300000, guid: 4bbe8d0dfe7d66f45b2be827d961a7b7, type: 3}
+  - {fileID: 8300000, guid: 23f6cf56a09faca40ad4e549949d8376, type: 3}
+  - {fileID: 8300000, guid: e9b7db83920748946a4d032f52f747a6, type: 3}
 --- !u!4 &1618658191
 Transform:
   m_ObjectHideFlags: 0
@@ -133180,7 +133180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepSounds:
-  - {fileID: 8300000, guid: 245d80f7ca6341848b41b51004114ee7, type: 3}
+  - {fileID: 8300000, guid: e6160762e2ca8994ea4b23af31701513, type: 3}
+  - {fileID: 8300000, guid: f17d6e0e2bc54a94e85a35a02fc43956, type: 3}
+  - {fileID: 8300000, guid: 9bd7c6702c62ec64eb3437fdfcb8a7f3, type: 3}
   minTimeBetweenFootsteps: 0.4
   maxTimeBetweenFootsteps: 0.7
   isWalking: 0
