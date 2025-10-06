@@ -38,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
             footstepController.isWalking = false;
             animator.SetBool("isMoving", false);
         }
+
+        if(controller.m_Grounded)
+        {
+            animator.ResetTrigger("isJumping");
+        }
+
     }
 
     void FixedUpdate()
