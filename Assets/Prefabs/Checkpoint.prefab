@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc40c2b33f1de24f96c74961e55e9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passed: {fileID: 8300000, guid: 7471e1d5a239e0048969d82db084bdbe, type: 3}
+  passed: {fileID: 8300000, guid: 6bec33e099488214ba8f4aaab4f295a2, type: 3}
   audioPlayed: 0
   greenBeam: {fileID: 21300000, guid: d2196f5d044a96c41ad4b7c68a3b0705, type: 3}
   render: {fileID: 471297143}
