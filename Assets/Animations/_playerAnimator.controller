@@ -3,9 +3,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of fcdfd5fb (Revert "animations")
+=======
+>>>>>>> parent of 1b0c53c7 (Revert "animations")
 --- !u!1101 &-6952607669191663613
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -32,9 +35,12 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of f1779649 (Added an animator)
 =======
 >>>>>>> parent of fcdfd5fb (Revert "animations")
+=======
+>>>>>>> parent of 1b0c53c7 (Revert "animations")
 --- !u!1102 &-6441634246139308341
 AnimatorState:
   serializedVersion: 6
@@ -45,6 +51,7 @@ AnimatorState:
   m_Name: jumpAnim
   m_Speed: 1
   m_CycleOffset: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_Transitions: []
@@ -58,6 +65,11 @@ AnimatorState:
   - {fileID: 8181826866206900589}
   - {fileID: -6952607669191663613}
 >>>>>>> parent of fcdfd5fb (Revert "animations")
+=======
+  m_Transitions:
+  - {fileID: 8181826866206900589}
+  - {fileID: -6952607669191663613}
+>>>>>>> parent of 1b0c53c7 (Revert "animations")
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -92,6 +104,7 @@ AnimatorStateTransition:
   serializedVersion: 3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TransitionDuration: 0.003571391
   m_TransitionOffset: 1.1064906
 =======
@@ -102,6 +115,10 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
 >>>>>>> parent of fcdfd5fb (Revert "animations")
+=======
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+>>>>>>> parent of 1b0c53c7 (Revert "animations")
   m_ExitTime: 0.9961741
   m_HasExitTime: 0
   m_HasFixedDuration: 1
@@ -205,6 +222,7 @@ AnimatorStateMachine:
     m_State: {fileID: -6441634246139308341}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Position: {x: 150, y: 390, z: 0}
 =======
     m_Position: {x: 130, y: 50, z: 0}
@@ -216,13 +234,17 @@ AnimatorStateMachine:
     m_State: {fileID: 5847874233315676594}
     m_Position: {x: 220, y: 270, z: 0}
 >>>>>>> parent of f3ad5291 (Revert "Added an animator")
+=======
+    m_Position: {x: 130, y: 50, z: 0}
+>>>>>>> parent of 1b0c53c7 (Revert "animations")
   m_ChildStateMachines: []
-  m_AnyStateTransitions: []
+  m_AnyStateTransitions:
+  - {fileID: 9005038552178002081}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_AnyStatePosition: {x: -220, y: 50, z: 0}
+  m_EntryPosition: {x: -220, y: 280, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
 <<<<<<< HEAD
@@ -246,6 +268,7 @@ AnimatorStateTransition:
   serializedVersion: 3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TransitionDuration: 0.0009293134
 =======
   m_TransitionDuration: 0.1
@@ -253,6 +276,9 @@ AnimatorStateTransition:
 =======
   m_TransitionDuration: 0.1
 >>>>>>> parent of fcdfd5fb (Revert "animations")
+=======
+  m_TransitionDuration: 0.1
+>>>>>>> parent of 1b0c53c7 (Revert "animations")
   m_TransitionOffset: 0
   m_ExitTime: 0.00000018750275
   m_HasExitTime: 0
@@ -290,3 +316,53 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &8181826866206900589
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isMoving
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -2878467496797084046}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+  m_ExitTime: 1
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &9005038552178002081
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isJumping
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -6441634246139308341}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 3
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
